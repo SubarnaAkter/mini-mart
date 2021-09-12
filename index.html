@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FakeStore</title>
+  <title>Mini mart</title>
   <link rel="stylesheet" href="./css/style.css" />
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -20,10 +20,11 @@
 <body>
   <header></header>
   <main class="main">
+    <h1 class="heading">Welcome to <span class="top-name"> Mini Mart</span> </h1>
     <div class="search-field">
       <div class="search-box">
-        <input id="input-field" class="search-field" type="text" />
-        <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
+        <input id="input-field" class="search-field" type="text" placeholder="Search your Products" />
+        <button type="button" class="btn  search-button" data-toggle="button" aria-pressed="false"
           autocomplete="off" id="search-btn" onclick="loadProducts()">
           Search
         </button>
@@ -80,7 +81,8 @@
             </tbody>
           </table>
           <div class="parces text-center">
-            <button class="btn btn-primary text-center">Buy Now</button>
+            <button class="btn search-button
+             text-center">Buy Now</button>
           </div>
         </div>
       </div>
