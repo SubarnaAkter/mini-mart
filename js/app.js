@@ -6,28 +6,28 @@ const loadProducts = () => {
 
   fetch(url)
     .then((response) => response.json())
-    .then((data) => showProducts(data));
+    .then((data) => displayProducts(data));
 };
 
-
+loadProducts();
 // show all product in UI 
-const showProducts = (products) => {
+const displayProducts = (products) => {
   const allProducts = products.map((pd) => pd);
   for (const product of allProducts) {
     //get image
     const images = product.image;
     const div = document.createElement("div");
     div.classList.add("product");
-    div.innerHTML = `<div class="single-product mt-5">
+    div.innerHTML = `<div class="single-product shadow-lg mt-5">
       <div>
     <img class="product-image" src=${images}></img>
       </div>
       <h3 class="title-color">${(product.title).slice(0,15)}</h3>
       <p>Category: ${product.category}</p>
-      <p>Total ratings:${product.rating.count} persons</p>
-       <p class="rating">Rating:${product.rating.rate}</p>
+      <p><i class="fas fa-user-alt"></i><span class="rating">Total ratings:${product.rating.count} persons</span></p>
+       <p class="rating"><i class="fas fa-star icon"></i>Rating:${product.rating.rate}</p>
       <h2>Price: $ ${product.price}</h2>
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now  btn-add-cart">add to cart</button>
+      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now  btn-add-cart"><i class="fas fa-cart-plus"></i> add to cart</button>
       <button id="details-btn" class=" btn-details">Details</button></div>
       `;
     document.getElementById("all-products").appendChild(div);
@@ -79,6 +79,7 @@ const updateTaxAndCharge = () => {
     setInnerText("delivery-charge", 60);
     setInnerText("total-tax", priceConverted * 0.4);
   }
+  //grandTotal update function call
   updateTotal();
 };
 
@@ -89,4 +90,4 @@ const updateTotal = () => {
     getInputValue("total-tax")).toFixed(2));
   document.getElementById("total").innerText = grandTotal;
 };
-loadProducts();
+

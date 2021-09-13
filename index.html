@@ -6,7 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mini mart</title>
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/5b055b30da.js" crossorigin="anonymous"></script>
+
+  <!-- css stylesheet -->
   <link rel="stylesheet" href="./css/style.css" />
+
   <!-- Latest compiled and minified CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
@@ -24,7 +29,7 @@
     <!-- Search field -->
     <div class="input-group mb-3 w-25 mx-auto my-5 mb-5">
       <input  id="input-field" type="text" class="form-control search-field" placeholder="Search your Products" aria-label="Recipient's username" aria-describedby="button-addon2">
-      <button class="btn btn-outline-secondary search-button bg-dark text-white fw-bold" type="button" id="button-addon2"  onclick="loadProducts()"> Search</button>
+      <button class="btn btn-outline-secondary search-button bg-dark text-white fw-bold" type="button" id="button-addon2"  onclick="loadProducts()"><i class="fas fa-search"></i> Search</button>
     </div>
 
     <!-- all products card -->
@@ -34,6 +39,7 @@
          
         </div>
       </div>
+      <!-- cart -->
       <div class="col-md-3 col-lg-3 col-sm-5 cart-main mt-5">
         <div class="cart " id="my-cart">
           <table class="table">
@@ -79,7 +85,7 @@
             </tbody>
           </table>
           <div class="parces text-center">
-            <button class="btn-add-cart">Buy Now</button>
+            <button class="btn-add-cart"><i class="fas fa-shopping-cart"></i> Buy Now</button>
           </div>
         </div>
       </div>
