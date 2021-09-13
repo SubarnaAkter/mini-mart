@@ -18,7 +18,7 @@ const showProducts = (products) => {
     const images = product.image;
     const div = document.createElement("div");
     div.classList.add("product");
-    div.innerHTML = `<div class="single-product">
+    div.innerHTML = `<div class="single-product mt-5">
       <div>
     <img class="product-image" src=${images}></img>
       </div>
